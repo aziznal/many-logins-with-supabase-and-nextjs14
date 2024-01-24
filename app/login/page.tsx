@@ -2,6 +2,7 @@ import Link from "next/link";
 import { headers, cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
+import GithubAuthButton from "@/components/GithubAuthButton";
 
 export default function Login({
   searchParams,
@@ -82,15 +83,18 @@ export default function Login({
         <label className="text-md" htmlFor="email">
           Email
         </label>
+
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           name="email"
           placeholder="you@example.com"
           required
         />
+
         <label className="text-md" htmlFor="password">
           Password
         </label>
+
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           type="password"
@@ -98,9 +102,15 @@ export default function Login({
           placeholder="••••••••"
           required
         />
-        <button className="bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+
+        <button className="bg-green-700 rounded-md px-4 py-2 text-foreground">
           Sign In
         </button>
+
+        <GithubAuthButton />
+
+        <div className="mb-2"/>
+
         <button
           formAction={signUp}
           className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"

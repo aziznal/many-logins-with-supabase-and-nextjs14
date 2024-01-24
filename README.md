@@ -1,3 +1,14 @@
+# What I did
+
+1. initialized a nextjs app with the supabase template
+2. enabled github login on supabase auth
+3. added oauth app on github (under settings -> developer settings -> oauth apps)
+4. copy-pasted values between supabase auth and github oauth app creation forms
+5. added call in code to login with gitub using the `GithubAuthButton` component
+6. Doneso.
+
+---
+
 <a href="https://demo-nextjs-with-supabase.vercel.app/">
   <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
   <h1 align="center">Next.js and Supabase Starter Kit</h1>
